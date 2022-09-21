@@ -6,13 +6,13 @@
 /*   By: ygunay <ygunay@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:50:49 by ygunay            #+#    #+#             */
-/*   Updated: 2022/09/21 14:05:43 by ygunay           ###   ########.fr       */
+/*   Updated: 2022/09/21 14:58:03 by ygunay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
-char *find_path(char **envp)
+char *find_paths(char **envp)
 {
 	int i;
 
@@ -30,6 +30,10 @@ int main(int argc, char **argv, char **envp)
 	
 	(void)argc;
 	(void)argv;
+
+	pipex.paths=find_paths(envp);
+	pipex.cmd_paths = ft_split(pipex.paths, ':');// free
+	
 	pipex.cmd_path = get_cmd_path();
 	if (!pipex.cmd_path)
 	{
