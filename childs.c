@@ -6,7 +6,7 @@
 /*   By: ygunay <ygunay@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 15:12:34 by ygunay            #+#    #+#             */
-/*   Updated: 2022/09/22 16:21:48 by ygunay           ###   ########.fr       */
+/*   Updated: 2022/09/22 16:26:35 by ygunay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void first(t_pipex pipex, char ** argv , char **envp)
 	close(pipex.end[1]);
 	pipex.cmd_args = ft_split(argv[2], ' ');
 	pipex.cmd = get_cmd(pipex.cmd_paths, pipex.cmd_args[0]);
-	execve(pipex.cmd,pipex.cmd_args,envp);
+	execve(pipex.cmd, pipex.cmd_args, envp);
 	
 }
 
@@ -66,5 +66,5 @@ void second(t_pipex pipex, char ** argv , char **envp)
 	close(pipex.end[0]);
 	pipex.cmd_args = ft_split(argv[3], ' ');
 	pipex.cmd = get_cmd(pipex.cmd_paths, pipex.cmd_args[0]);
-	execve(pipex.cmd,pipex.cmd_args,envp);
+	execve(pipex.cmd, pipex.cmd_args, envp);
 }
