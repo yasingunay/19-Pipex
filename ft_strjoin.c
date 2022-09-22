@@ -6,12 +6,11 @@
 /*   By: ygunay <ygunay@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 09:47:12 by ygunay            #+#    #+#             */
-/*   Updated: 2022/09/16 12:46:57 by ygunay           ###   ########.fr       */
+/*   Updated: 2022/09/22 12:07:51 by ygunay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include "../includes/pipex.h"
+#include "pipex.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 

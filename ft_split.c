@@ -6,11 +6,11 @@
 /*   By: ygunay <ygunay@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 11:33:54 by ygunay            #+#    #+#             */
-/*   Updated: 2022/09/21 14:48:53 by ygunay           ###   ########.fr       */
+/*   Updated: 2022/09/22 12:08:10 by ygunay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../pipex.h"
+#include "pipex.h"
 
 static size_t	check_str(char const *s, char c)
 {

@@ -6,7 +6,7 @@
 /*   By: ygunay <ygunay@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 12:18:02 by ygunay            #+#    #+#             */
-/*   Updated: 2022/09/16 12:47:00 by ygunay           ###   ########.fr       */
+/*   Updated: 2022/09/22 12:07:54 by ygunay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@
 *	terminating NUL character.  
 */
 
-//#include "libft.h"
-#include "../includes/pipex.h"
+#include "pipex.h"
 
 size_t	ft_strlen(const char *s)
 {

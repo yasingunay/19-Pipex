@@ -6,7 +6,7 @@
 /*   By: ygunay <ygunay@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 15:08:53 by ygunay            #+#    #+#             */
-/*   Updated: 2022/09/21 13:45:11 by ygunay           ###   ########.fr       */
+/*   Updated: 2022/09/22 12:07:47 by ygunay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ RETURN VALUES
      unsigned characters, so that `\200' is greater than `\0'.
 */
 
-#include "../pipex.h"
+#include "pipex.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
