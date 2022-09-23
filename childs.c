@@ -6,7 +6,7 @@
 /*   By: ygunay <ygunay@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 15:12:34 by ygunay            #+#    #+#             */
-/*   Updated: 2022/09/22 16:26:35 by ygunay           ###   ########.fr       */
+/*   Updated: 2022/09/23 10:17:33 by ygunay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ char *get_cmd(char **paths, char *cmd)
 }
 
 
+
 void first(t_pipex pipex, char ** argv , char **envp)
 {
 	pipex.infile = open(argv[1],O_RDONLY);
@@ -51,6 +52,12 @@ void first(t_pipex pipex, char ** argv , char **envp)
 	close(pipex.end[1]);
 	pipex.cmd_args = ft_split(argv[2], ' ');
 	pipex.cmd = get_cmd(pipex.cmd_paths, pipex.cmd_args[0]);
+	if (!pipex.cmd)
+	{
+		child_free(&pipex);
+		write(2,"Command not found\n",19);
+		exit(1);
+	}
 	execve(pipex.cmd, pipex.cmd_args, envp);
 	
 }
@@ -66,5 +73,11 @@ void second(t_pipex pipex, char ** argv , char **envp)
 	close(pipex.end[0]);
 	pipex.cmd_args = ft_split(argv[3], ' ');
 	pipex.cmd = get_cmd(pipex.cmd_paths, pipex.cmd_args[0]);
+	if (!pipex.cmd)
+	{
+		child_free(&pipex);
+		write(2,"Command not found\n",19);
+		exit(127);
+	}
 	execve(pipex.cmd, pipex.cmd_args, envp);
 }

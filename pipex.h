@@ -6,7 +6,7 @@
 /*   By: ygunay <ygunay@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:42:01 by ygunay            #+#    #+#             */
-/*   Updated: 2022/09/22 16:13:29 by ygunay           ###   ########.fr       */
+/*   Updated: 2022/09/23 10:18:51 by ygunay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ char *find_path(char **envp);
 char *get_cmd(char **paths, char *cmd);
 void first(t_pipex pipex, char ** argv , char **envp);
 void second(t_pipex pipex, char ** argv , char **envp);
+void	child_free(t_pipex *pipex);
+void	parent_free(t_pipex *pipex);
 
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ygunay <ygunay@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:50:49 by ygunay            #+#    #+#             */
-/*   Updated: 2022/09/22 16:17:44 by ygunay           ###   ########.fr       */
+/*   Updated: 2022/09/23 10:16:20 by ygunay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int main(int argc, char **argv, char **envp)
 	
 	
 	pipex.paths=find_path(envp);
-	pipex.cmd_paths = ft_split(pipex.paths, ':');// free
+	pipex.cmd_paths = ft_split(pipex.paths, ':');
 
 	pipex.pid1 = fork();
 	if(pipex.pid1 == 0)
@@ -44,6 +44,6 @@ int main(int argc, char **argv, char **envp)
 	close(pipex.end[1]);
 	waitpid(pipex.pid1, &status, 0);
 	waitpid(pipex.pid2, &status, 0);
-	
+	parent_free(&pipex);
 	return (0);
 }

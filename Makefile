@@ -6,7 +6,7 @@
 #    By: ygunay <ygunay@student.s19.be>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/15 13:20:58 by ygunay            #+#    #+#              #
-#    Updated: 2022/09/22 16:11:23 by ygunay           ###   ########.fr        #
+#    Updated: 2022/09/23 10:19:04 by ygunay           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,10 +19,10 @@ HEADER_SRCS = pipex.h
 HEADER_DIR = ./
 HEADER = $(addprefix $(HEADER_DIR), $(HEADER_SRCS))
 
-MPATH_SRCS = pipex.c childs.c error_check.c ft_strncmp.c ft_split.c ft_strjoin.c ft_strlen.c
-MPATH_DIR = ./
-MPATH = $(addprefix $(MPATH_DIR), $(MPATH_SRCS))
-OBJ_M = $(MPATH:.c=.o)
+PATH_SRCS = pipex.c childs.c error_check.c free.c ft_strncmp.c ft_split.c ft_strjoin.c ft_strlen.c
+PATH_DIR = ./
+PATH = $(addprefix $(PATH_DIR), $(PATH_SRCS))
+OBJ_M = $(PATH:.c=.o)
 
 
 %.o: %.c $(HEADER) Makefile
